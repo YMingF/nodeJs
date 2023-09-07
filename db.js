@@ -24,13 +24,24 @@ const db = {
   write(list, path = dbPath) {
     return new Promise((resolve, reject) => {
       const string = JSON.stringify(list);
-      fs.writeFile(dbPath, string + "\n", (err) => {
+      fs.writeFile(dbPath, string + '\n', (err) => {
         if (err) {
           return reject(err);
         }
         resolve();
       });
     });
+  },
+  clear() {
+    return new Promise((resolve, reject) => {
+      fs.writeFile(dbPath, '', (err) => {
+        if (err) {
+          return reject(err);
+        }
+        resolve()
+      });
+    });
+
   },
 };
 module.exports = db; //即db有哪些属性，那就导出哪些属性
