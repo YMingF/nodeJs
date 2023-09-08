@@ -1,3 +1,4 @@
+// cli就是（command-line interface）命令行界面的缩写
 const program = require("commander");
 const { add, clear, showAll } = require("./index.js");
 program.option("-x", "--xxx", "test");
