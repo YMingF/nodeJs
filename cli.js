@@ -1,7 +1,9 @@
-// cli就是（command-line interface）命令行界面的缩写
+#!/usr/bin/env node
+// cli就是（command-line interface）命令行界面的缩写.
 const program = require("commander");
 const { add, clear, showAll } = require("./index.js");
-program.option("-x", "--xxx", "test");
+const pkg = require("./package.json");
+program.version(pkg.version);
 program
   .command("add")
   .description("add a item")

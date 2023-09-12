@@ -1,6 +1,6 @@
 {
-  "name": "node-todo-2",
-  "version": "0.0.3",
+  "name": "rg-todo-1",
+  "version": "0.0.1",
   "main": "cli.js",
   "license": "MIT",
   "bin": {
@@ -9,7 +9,7 @@
   "files": [
     "*.js"
   ],
-  "scripts":{
+  "scripts": {
     "test": "jest"
   },
   "dependencies": {
